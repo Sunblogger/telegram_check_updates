@@ -1,0 +1,17 @@
+[Unit]
+Description=Get updates from Telegram Bot and save the updates in files
+# we start only when we have network ready
+After=dhcpcd.service	
+
+[Service]
+User=pi
+Group=pi
+Type=simple
+KillMode=none
+WorkingDirectory=/home/pi/telegram_check_updates
+
+ExecStart=/home/pi/telegram_check_updates/telegram_check_updates 397796956:AAGxGlaePKbUV_fWZFG2RT9u6MhWRPxLwpk 0 20 /home/pi/telegram/
+ExecStop=/usr/bin/touch /home/pi/telegram_check_updates/telegram_check_updates.stop
+ 
+[Install]
+WantedBy=multi-user.target

@@ -56,6 +56,12 @@ The program uses libraries from ```curl``` and ```JSON```. In order to install t
 ```sudo apt-get install libcurl4-openssl-dev```\
 ```sudo apt-get install libjsoncpp-dev```
 
+Download this repository into your home-directory by entering:
+```git clone https://github.com/Sunblogger/telegram_check_updates```
+Download the repository with the classes ```cpp_sources``` by entering:
+```git clone https://github.com/Sunblogger/cpp_sources```
+Now call ```make``` in the directory ```telegram_check_updates```.
+
 The program has only been tested on the Raspberry Pi. But it should also work on another Linux.
 
 # Sample files
@@ -123,6 +129,12 @@ Die aktuelle Fassung der Dateien ist im Repository abgelegt.
 Das Programm nutzt die Bibliotheken von ```curl``` und ```JSON```. Um diese beiden Bibliotheken zu installieren, ist dies auszuführen:\
 ```sudo apt-get install libcurl4-openssl-dev```\
 ```sudo apt-get install libjsoncpp-dev```
+
+Zunächst muss dieses Repository in das eigene Home-Verzeichnis heruntergeladen werden mit:
+```git clone https://github.com/Sunblogger/telegram_check_updates```
+Danach muss das oben erwähnte Repository mit den Klassen ```cpp_sources``` heruntergeladen werden mit:
+```git clone https://github.com/Sunblogger/cpp_sources```
+Nun muss im Verzeichnis ```telegram_check_updates``` das makefile ausgeführt werden mit ```make```.
 
 Das Programm ist nur auf dem Raspberry Pi getestet worden. Es sollte aber auch auf einem anderem Linux funktionieren.
 

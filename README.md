@@ -70,7 +70,7 @@ The directory ```samples``` contains examples of what the files with the updates
 
 # systemd-service
 
-In order to let the program run as a systemd-service you can use the file ```telegram_check_updates.service```.
+In order to let the program run as a systemd-service you can use the file ```telegram_check_updates.service```. Note: you have to adjust the name of the home-directory to your local settings. By default it is assumed, that the home-directory is ```/home/pi/```.
 
 # Outlook
 
@@ -144,7 +144,7 @@ Im Verzeichnis ```samples``` sind Beispiele abgelegt, wie die Dateien mit den Up
 
 # systemd-service
 
-Um das Program als systemd-Dienst zu nutzen, kann man die Datei ```telegram_check_updates.service``` nutzen.
+Um das Program als systemd-Dienst zu nutzen, kann man die Datei ```telegram_check_updates.service``` nutzen. Beachte: das eigene home-Verzeichnis muss angepasst werden, es lautet per default ```/home/pi/```.
 
 # Ausblick
 

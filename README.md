@@ -21,7 +21,7 @@ b) The simple but not so nice variant is to press Ctrl-C.
 
 ```Waiting time between 2 calls in 0.1 seconds```: This is an integer value from 1. Please note that the program does not make a new call exactly after the specified waiting time, but only "sleeps" this waiting time after processing a call. This was easier to implement than having to wait an exact wait regardless of the processing.
 
-Directory for saving the text files: By default, the text files are saved in the current directory. Here you can specify the directory in which the files are to be stored. The user under whom the program is started must have write access to this directory.
+```Directory for saving the text files```: By default, the text files are saved in the current directory. Here you can specify the directory in which the files are to be stored. The user under whom the program is started must have write access to this directory. Note: you have to have an ```/``` at the end of this parameter. 
 
 Example # 1: An update should only be fetched and stored once. The update should be stored in the directory ```/home/pi/```. The call looks like this:
 ```
@@ -98,7 +98,7 @@ b) Die einfache aber nicht so schöne Variante ist, Strg-C zu drücken.
 
 ```Wartezeit zwischen 2 Abrufen in 0.1 Sekunden```: Das ist ein ganzzahliger Wert ab 1. Es ist zu beachten, dass das Programm nicht exakt nach der angegebenen Wartezeit einen neuen Aufruf durchführt sondern erst nach Verarbeitung eines Abrufs diese Wartezeit "schläft". Dies war einfacher zu implementieren als eine exakte Wartezeit unabhängig von der Verarbeitung zu warten.
 
-Verzeichnis zum Abspeichern der Textdateien: Per Default werden die Textdateien im aktuellen Verzeichnis abgespeichert. Man kann hier angeben, in welchem Verzeichnis die Dateien abgelegt werden sollen. Für dieses Verzeichnis muss der User, unter dem das Programm gestartet wird, Schreibrechte haben.
+```Verzeichnis zum Abspeichern der Textdateien```: Per Default werden die Textdateien im aktuellen Verzeichnis abgespeichert. Man kann hier angeben, in welchem Verzeichnis die Dateien abgelegt werden sollen. Für dieses Verzeichnis muss der User, unter dem das Programm gestartet wird, Schreibrechte haben. Beachte: am Ende muss ein ```/``` stehen. 
 
 Beispiel #1: Es soll nur ein einziges Mal ein Updates geholt und abgelegt werden. Das Update soll im Verzeichnis /home/pi/ abgelegt werden. Der Aufruf sieht so aus:
 ```

@@ -29,7 +29,7 @@
 
 // #define DEVSTAGE	// we are in development-stage: we print some more messages on screen than desired in production release
 
-const std::string version_of_program = "0.3";
+const std::string version_of_program = "0.4";
 
 unsigned int number_of_cycles;	// how many times will we repeat to get updates?
 unsigned int wait_time_cycles;	// waittime before we get next update

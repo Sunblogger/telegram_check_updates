@@ -10,7 +10,7 @@ Type=simple
 KillMode=none
 WorkingDirectory=/home/pi/telegram_check_updates
 
-ExecStart=/home/pi/telegram_check_updates/telegram_check_updates <chat-ID>:<toeken> 0 20 /home/pi/telegram/
+ExecStart=/home/pi/telegram_check_updates/telegram_check_updates <chat-ID>:<token> 0 20 /home/pi/telegram/
 ExecStop=/usr/bin/touch /home/pi/telegram_check_updates/telegram_check_updates.stop
  
 [Install]

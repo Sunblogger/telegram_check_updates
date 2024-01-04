@@ -3,7 +3,7 @@ German version [below](#deutsche-version).
 # Purpose of the program
 
 With this program it is possible to call up updates to a Telegram chat and to save the updates as individual text files. The text files then reflect the content of the chat and the updates are then deleted in Telegram. Updates can therefore only be called up and saved once.
-The program is designed so that it can run as a daemon [systemd service](#systemd-service).
+The program is designed so that it can run as a daemon [systemd service](#systemd-service-file).
 
 # How does the program work?
 
@@ -68,7 +68,7 @@ The program has only been tested on the Raspberry Pi. But it should also work on
 
 The directory ```samples``` contains examples of what the files with the updates look like.
 
-# systemd-service
+# systemd-service file
 
 In order to let the program run as a systemd-service you can use the file ```telegram_check_updates.service```. Note: you have to adjust the name of the home-directory to your local settings. By default it is assumed, that the home-directory is ```/home/pi/```. And you should create a directory ```telegram``` so that incoming messages can be saved there (or you adjust the paramater in the service-file).
 

@@ -51,7 +51,8 @@ Message: <text that was entered in the chat>
 
 The program is written in C++. The make file called [makefile](https://github.com/Sunblogger/telegram_check_updates/blob/main/makefile) can be used to create an executable program from the source code.
 Note that this program uses C++ classes I created that I built for general purposes. These classes are also used in other programs. I have these C++ classes in the ```/home/pi/cpp_sources``` directory. The makefile also looks for these classes in it.
-The current version of the files is stored in the repository.
+The current version of the files is stored in the repository [cpp_classes](https://github.com/Sunblogger/cpp_sources). 
+In order to download them call in a terminal ```git clone ```.
 The program uses libraries from ```curl``` and ```JSON```. In order to install these libraries, enter this commands:\
 ```sudo apt-get install libcurl4-openssl-dev```\
 ```sudo apt-get install libjsoncpp-dev```

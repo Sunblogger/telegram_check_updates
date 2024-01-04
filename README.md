@@ -1,16 +1,16 @@
 German version [below](#deutsche-version).
 
-# Purpose of the program
+## Purpose of the program
 
 With this program it is possible to call up updates to a Telegram chat and to save the updates as individual text files. The text files then reflect the content of the chat and the updates are then deleted in Telegram. Updates can therefore only be called up and saved once.
 The program is designed so that it can run as a daemon [systemd service](#systemd-service-file).
 
-# How does the program work?
+## How does the program work?
 
 The program uses a chat ID and a token from a bot to read updates from Telegram and then save them as a text file. The updates come back from Telegram as JSON results and text files are then built from these JSON results. After querying the updates, Telegram is informed by means of an update counter which update ID was queried last so that Telegram deletes all old updates.
 While the program is running, various information is recorded in a log file. This log file can be helpful when looking for errors. The log file has the same name as the program and has the extension ```.log```.
 
-# Parameters
+## Parameters
 In order to use the program, these parameters must be given with the call:
 
 ```Chat ID + token of the bot```: The chat ID is given together with the token of the bot. Both values are separated with a colon ':'.
@@ -32,7 +32,7 @@ Example # 2: You should try 10 times to get updates and wait 5 seconds between c
 ```
 ./telegram_check_updates 123456:ABCDEFGE_gjklpoiuztr 10 50
 ```
-# Updates as text files
+## Updates as text files
 
 The text files created by the program have these conventions for the name:
 ```
@@ -47,7 +47,7 @@ Chat ID: <the ID of the chat>
 Message: <text that was entered in the chat>
 ```
 
-# How is the program created?
+## How is the program created?
 
 The program is written in C++. The make file called ```makefile``` can be used to create an executable program from the source code.
 Note that this program uses C++ classes I created that I built for general purposes. These classes are also used in other programs. I have these C++ classes in the ```/home/pi/cpp_sources``` directory. The makefile also looks for these classes in it.
@@ -64,31 +64,33 @@ Now call ```make``` in the directory ```telegram_check_updates```.
 
 The program has only been tested on the Raspberry Pi. But it should also work on another Linux.
 
-# Sample files
+## Sample files
 
-The directory ```samples``` contains examples of what the files with the updates look like.
+The directory [samples](https://github.com/Sunblogger/telegram_check_updates/tree/main/samples) contains examples of what the files with the updates look like.
 
-# systemd-service file
+<a name="systemd-service-file"></a>
+## systemd-service file
 
 In order to let the program run as a systemd-service you can use the file ```telegram_check_updates.service```. Note: you have to adjust the name of the home-directory to your local settings. By default it is assumed, that the home-directory is ```/home/pi/```. And you should create a directory ```telegram``` so that incoming messages can be saved there (or you adjust the paramater in the service-file).
 
-# Outlook
+## Outlook
 
 The program will be integrated into my program [message2action](https://github.com/Sunblogger/message2action). With this integration, there is no need to store and read in text files. It is then possible to process the data in the memory.
 
+<a name="deutsche-version"></a>
 # Deutsche Version
 
-# Zweck des Programms
+## Zweck des Programms
 
 Mit diesem Programm ist es möglich, Updates zu einem Telegram-Chat abzurufen und die Updates als einzelne Text-Dateien zu speichern. Die Textdateien geben dann den Inhalt des Chats wieder und in Telegram werden die Updates dann gelöscht. Updates können also nur einmal abgerufen und abgespeichert werden.
-Das Programm ist so ausgelegt, dass es als Daemon [systemd service](#systemd-service-1) laufen kann.
+Das Programm ist so ausgelegt, dass es als Daemon [systemd service](#systemd-service-datei) laufen kann.
 
-# Wie funktioniert das Programm?
+## Wie funktioniert das Programm?
 
 Das Programm nutzt eine Chat-ID und einen Token eines Bots, um Updates aus Telegram auszulesen und dann als Text-Datei abzuspeichern. Die Updates kommen als JSON-Ergebnisse von Telegram zurück und aus diesen JSON-Ergebnissen werden dann Textdateien aufgebaut. Nach dem Abfragen der Updates wird Telegram mittels eines Update-Counters mitgeteilt, welche Update-ID als letztes abgefragt wurde so dass Telegram alle alten Updates löscht.
 Während das Programm läuft, werden verschiedene Informationen in einer Log-Datei mitgeschrieben. Diese Logdatei kann hilfreich sein, wenn man Fehler sucht. Die Log-Datei heißt genauso wie das Programm und hat die Endung ```.log```.
 
-# Parameter 
+## Parameter 
 Um das Program zu nutzen, sind diese Parameter mit dem Aufruf mitzugeben:
 
 ```Chat-ID + Token des Bot```: Die Chat-ID wird zusammen mit dem Token des Bot angegeben. Beide Werte werden mit einem Doppelpunkt ':' getrennt.
@@ -109,7 +111,7 @@ Beispiel #2: Es soll 10 mal versucht werden, Updates zu holen und zwischen den A
 ```
 ./telegram_check_updates 123456:ABCDEFGE_gjklpoiuztr 10 50
 ```
-# Updates als Textdateien
+## Updates als Textdateien
 
 Die Textdateien, die das Programm anlegt, haben diese Konventionen für den Namen:
 ```
@@ -122,7 +124,7 @@ Chat-ID: <die ID des Chats>
 Message: <Text, der im Chat eingegeben wurde>
 ```
 
-# Wie wird das Programm erstellt?
+## Wie wird das Programm erstellt?
 
 Das Programm ist in C++ geschrieben. Um aus dem Quelltext ein ausführbares Programm zu erzeugen, kann die Make-Datei namens ```makefile``` genutzt werden.
 Beachte, dass dieses Programm von mir erstellte C++-Klassen nutzt, die ich für allgemeine Zwecke aufgebaut habe. Diese Klassen werden auch in anderen Programmen benutzt. Diese C++-Klassen liegen bei mir im Verzeichnis ```/home/pi/cpp_sources```. Das makefile sucht darin auch diese Klassen.
@@ -139,14 +141,15 @@ Nun muss im Verzeichnis ```telegram_check_updates``` das makefile ausgeführt we
 
 Das Programm ist nur auf dem Raspberry Pi getestet worden. Es sollte aber auch auf einem anderem Linux funktionieren.
 
-# Beispieldateien
+## Beispieldateien
 
-Im Verzeichnis ```samples``` sind Beispiele abgelegt, wie die Dateien mit den Updates aussehen.
+Im Verzeichnis [samples](https://github.com/Sunblogger/telegram_check_updates/tree/main/samples) sind Beispiele abgelegt, wie die Dateien mit den Updates aussehen.
 
-# systemd-service
+<a name="systemd-service-datei"></a>
+## systemd-service
 
 Um das Program als systemd-Dienst zu nutzen, kann man die Datei ```telegram_check_updates.service``` nutzen. Beachte: das eigene home-Verzeichnis muss angepasst werden, es lautet per default ```/home/pi/```. Es muss ein Verzeichnis ```telegram``` im Home-Verzeichnis angelegt werden, damit heruntergeladene Dateien gespeichert werden können (oder man nimmt ein anderes Verzeichnis und passt den Parameter in der service-Datei an).
 
-# Ausblick
+## Ausblick
 
 Das Programm wird in mein Programm [message2action](https://github.com/Sunblogger/message2action) integriert werden. Mit dieser Integration wird auf das Ablegen und Einlesen von Textdateien verzichtet. Es ist dann eine Verarbeitung der Daten im Speicher möglich.

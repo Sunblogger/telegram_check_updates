@@ -74,7 +74,8 @@ In order to let the program run as a systemd-service you can use the file ```tel
 
 # Outlook
 
-The program will be integrated into my program [message2action](https://github.com/Sunblogger/message2action). With this integration, there is no need to store and read in text files. It is then possible to process the data in the memory. 
+The program will be integrated into my program [message2action](https://github.com/Sunblogger/message2action). With this integration, there is no need to store and read in text files. It is then possible to process the data in the memory.
+
 # Deutsche Version
 
 # Zweck des Programms
